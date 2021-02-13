@@ -15,7 +15,8 @@ namespace MoviesApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        [Route("stats")]
+        public IActionResult Stats()
         {
             var stats = ReaderService.MakeStats();
             return Ok(stats);

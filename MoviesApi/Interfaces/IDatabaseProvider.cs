@@ -6,7 +6,6 @@ namespace MoviesApi.Interfaces
     public interface IDatabaseProvider
     {
         void SaveMovie(Movie movie);
-
         IEnumerable<Movie> GetMovies(int id);
     }
 }
