@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using MoviesApi.Interfaces;
 using MoviesApi.Models;
 
@@ -27,6 +28,12 @@ namespace MoviesApi.Controllers
         public IActionResult Index(int id)
         {
             var movies = DatabaseProvider.GetMovies(id);
+
+            if (movies.Count() < 1)
+            {
+                return NotFound();
+            }
+
             return Ok(movies);
         }
     }
