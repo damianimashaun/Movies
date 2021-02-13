@@ -3,6 +3,11 @@
 #### Start Project
 ###### Default Url: http://localhost:5000
 
-`dotnet restore`
+`
+cd Movies/MoviesApi &&
+
+dotnet restore &&
+
+dotnet run`
 
 `dotnet run`
