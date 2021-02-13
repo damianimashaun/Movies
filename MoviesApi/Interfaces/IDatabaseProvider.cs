@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MoviesApi.Models;
 
 namespace MoviesApi.Interfaces
@@ -9,7 +8,5 @@ namespace MoviesApi.Interfaces
         void SaveMovie(Movie movie);
 
         IEnumerable<Movie> GetMovies(int id);
-
-        
     }
 }
